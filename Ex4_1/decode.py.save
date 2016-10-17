@@ -1,0 +1,51 @@
+import string
+
+base_alpha =string.ascii_uppercase          
+#a = open('ex4_1_data.txt')
+#cipher_string = a.read()
+
+
+
+def main():
+	with open('ex4_1_data.txt') as cipher_file:
+		a = cipher_file.read()
+	for i in xrange(len(string.ascii_lowercase)):
+		print("(): ()".format(i,caesarDecode(a, i))
+
+
+
+def caesarDecode(data, shift):
+
+	result=''
+	for letter in data:
+        	if letter.isupper():
+			#use .find() to pull down the place number of the character
+                	start_position = base_alpha.find(letter)
+			#move the position by subtracting a number
+                	encoded_position = (start_position + shift) % 26
+			result += base_alpha[encoded_postion]
+		elif letter.islower():
+			import string
+
+base_alpha =string.ascii          
+cipher_text = ex4_1_data.txt.read()
+ 
+for letter in base_alpha:
+        if letter.isalpha():
+                start_position = base_alpha.find(letter)
+                print start_position
+
+		else:
+			result += letter
+	return result
+if __name__ == '__main__':
+
+
+
+def main(file):
+	data=''
+	with open file as f
+		dat. f.readlines
+		evalcaesarchiper(data)
+
+
