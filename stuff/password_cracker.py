@@ -1,14 +1,19 @@
 #!/usr/bin/python
 
 # The crypt library is used to hash and encrypt data
-import crypt
+import passlib
 
 # This is a stand-in password dictionary to guess from, later we will replace this with a file
-passwordList = ["password", "Password", "PASSWORD", "P@$$W0rd", "Passwerd", "WordPass", "WordPress", "pass", "word", "password1", "password123"]
+#
+# passwordList = ["password", "Password", "PASSWORD", "P@$$W0rd", "Passwerd", "WordPass", "WordPress", "pass", "word", "password1", "password123"]
+
+
 
 def main():
+passwordList = open(password.lst, -r)
+print(passwordList)
     # Open the fake shadow file and iterate over each line in it
-    for shadowLine in open("Shadow_File.txt"):
+    for shadowLine in open("ex4_3_data.txt"):
         # Take the line, strip all the whitespace off, split it on ":" and return the first two items assigning them to "username" and "fullhash" respectively
         username, fullhash = shadowLine.strip().split(":")[:2]
         # The salt is the first two fields of the fullhash, but we need to retain the $signs when we extract the salt
